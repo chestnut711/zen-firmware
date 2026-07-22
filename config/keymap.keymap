@@ -20,19 +20,19 @@
 
         layer_0 {
             bindings = <
-&kp ESC    &kp Q   &kp W             &kp E     &kp R      &kp T      &kp Y      &kp U      &kp I      &kp O           &kp P           &kp BSPC
-&kp TAB    &kp A   &kp S             &kp D     &kp F      &kp G      &kp H      &kp J      &kp K      &kp L           &kp MINUS       &kp ENTER
-&kp LSHFT  &kp Z   &kp X             &kp C     &kp V      &kp B      &kp SPACE  &kp SPACE  &kp N      &kp M           &kp COMMA       &kp DOT          &kp UP_ARROW  &kp RSHFT
-&kp LCTRL  &kp F1  &kp LEFT_COMMAND  &kp LALT  &kp SPACE  &kp SPACE  &mo 2      &mo 3      &kp SLASH  &kp LEFT_ARROW  &kp DOWN_ARROW  &kp RIGHT_ARROW
+&kp ESC    &kp Q   &kp W             &kp E     &kp R      &kp T      &kp Y        &kp U          &kp I      &kp O           &kp P           &kp BSPC
+&kp TAB    &kp A   &kp S             &kp D     &kp F      &kp G      &kp H        &kp J          &kp K      &kp L           &kp MINUS       &kp ENTER
+&kp LSHFT  &kp Z   &kp X             &kp C     &kp V      &kp B      &kp PAGE_UP  &kp PAGE_DOWN  &kp N      &kp M           &kp COMMA       &kp DOT          &kp UP_ARROW  &kp RSHFT
+&kp LCTRL  &kp F1  &kp LEFT_COMMAND  &kp LALT  &kp SPACE  &kp SPACE  &mo 2        &mo 3          &kp SLASH  &kp LEFT_ARROW  &kp DOWN_ARROW  &kp RIGHT_ARROW
             >;
         };
 
         layer_1 {
             bindings = <
-&trans  &trans  &trans  &trans  &trans  &trans  &trans                &mkp LCLK  &mo 4             &mkp RCLK  &trans                 &trans
-&trans  &trans  &trans  &trans  &trans  &trans  &kp RG(LEFT_BRACKET)  &mkp MB1   &mkp MB3          &mkp MB2   &kp RG(RIGHT_BRACKET)  &trans
-&trans  &trans  &trans  &trans  &trans  &trans  &trans                &trans     &kp LC(UP_ARROW)  &trans     &trans                 &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans  &trans                &trans     &trans            &trans     &trans                 &trans
+&trans  &trans  &trans  &trans  &trans     &trans     &trans                &mkp LCLK  &mo 4             &mkp RCLK  &trans                 &trans
+&trans  &trans  &trans  &trans  &trans     &trans     &kp RG(LEFT_BRACKET)  &mkp MB1   &mkp MB3          &mkp MB2   &kp RG(RIGHT_BRACKET)  &trans
+&trans  &trans  &trans  &trans  &trans     &trans     &trans                &trans     &kp LC(UP_ARROW)  &trans     &trans                 &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &mkp LCLK  &mkp RCLK  &trans                &trans     &trans            &trans     &trans                 &trans
             >;
         };
 
