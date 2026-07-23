@@ -20,19 +20,19 @@
 
         layer_0 {
             bindings = <
-&kp ESC    &kp Q   &kp W             &kp E     &kp R      &kp T      &kp Y        &kp U          &kp I      &kp O           &kp P           &kp BSPC
-&kp TAB    &kp A   &kp S             &kp D     &kp F      &kp G      &kp H        &kp J          &kp K      &kp L           &kp MINUS       &kp ENTER
-&kp LSHFT  &kp Z   &kp X             &kp C     &kp V      &kp B      &kp PAGE_UP  &kp PAGE_DOWN  &kp N      &kp M           &kp COMMA       &kp DOT          &kp UP_ARROW  &kp RSHFT
-&kp LCTRL  &kp F1  &kp LEFT_COMMAND  &kp LALT  &kp SPACE  &kp SPACE  &mo 2        &mo 3          &kp SLASH  &kp LEFT_ARROW  &kp DOWN_ARROW  &kp RIGHT_ARROW
+&kp LC(SPACE)  &kp Q   &kp W             &kp E     &kp R      &kp T      &kp Y        &kp U          &kp I      &kp O           &kp P           &kp BSPC
+&kp TAB        &kp A   &kp S             &kp D     &kp F      &kp G      &kp H        &kp J          &kp K      &kp L           &kp MINUS       &kp ENTER
+&kp LSHFT      &kp Z   &kp X             &kp C     &kp V      &kp B      &kp PAGE_UP  &kp PAGE_DOWN  &kp N      &kp M           &kp COMMA       &kp DOT          &kp UP_ARROW  &kp RSHFT
+&kp LCTRL      &kp F1  &kp LEFT_COMMAND  &kp LALT  &kp SPACE  &kp SPACE  &mo 2        &mo 3          &kp SLASH  &kp LEFT_ARROW  &kp DOWN_ARROW  &kp RIGHT_ARROW
             >;
         };
 
         mouse_layer {
             bindings = <
-&kp ESC    &kp Q      &kp W      &kp E     &kp R      &kp T      &kp Y   &kp U   &kp I      &kp O           &kp P           &kp BSPC
-&kp TAB    &kp A      &kp S      &kp D     &kp F      &kp G      &kp H   &kp J   &kp K      &kp L           &kp MINUS       &kp ENTER
-&kp LSHFT  &kp Z      &kp X      &kp C     &kp V      &kp B      &trans  &trans  &kp N      &kp M           &kp COMMA       &kp DOT          &kp UP_ARROW  &kp RSHFT
-&kp LCTRL  &mkp LCLK  &mkp RCLK  &kp LALT  &kp SPACE  &kp SPACE  &trans  &trans  &kp SLASH  &kp LEFT_ARROW  &kp DOWN_ARROW  &kp RIGHT_ARROW
+&kp LC(SPACE)  &kp Q      &kp W      &kp E     &kp R      &kp T      &kp Y   &kp U   &kp I      &kp O           &kp P           &kp BSPC
+&kp TAB        &kp A      &kp S      &kp D     &kp F      &kp G      &kp H   &kp J   &kp K      &kp L           &kp MINUS       &kp ENTER
+&kp LSHFT      &kp Z      &kp X      &kp C     &kp V      &kp B      &trans  &trans  &kp N      &kp M           &kp COMMA       &kp DOT          &kp UP_ARROW  &kp RSHFT
+&kp LCTRL      &mkp LCLK  &mkp RCLK  &kp LALT  &kp SPACE  &kp SPACE  &trans  &trans  &kp SLASH  &kp LEFT_ARROW  &kp DOWN_ARROW  &kp RIGHT_ARROW
             >;
         };
 
