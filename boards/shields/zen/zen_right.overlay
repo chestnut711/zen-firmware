@@ -1,20 +1,15 @@
 #include "zen.dtsi"
 #include <input/processors.dtsi>
-#include <input/processors/temp_layer.dtsi>   // ← 追加
 #include <dt-bindings/zmk/input_transform.h>
 
-/ {
-    tp_mouse: tp_mouse {
-        compatible = "zmk,input-processor-temp-layer";
-        #input-processor-cells = <2>;
-        require-prior-idle-ms = <300>;   // ← ここが遅延
-    };
+&zip_temp_layer {
+    require-prior-idle-ms = <300>;
 };
 
 &pointing_listener {
     input-processors =
         <&zip_xy_transform (INPUT_TRANSFORM_X_INVERT | INPUT_TRANSFORM_Y_INVERT)>,
-        <&tp_mouse 1 500>;   // ← zip_temp_layer から tp_mouse へ
+        <&zip_temp_layer 1 500>;
 
     scroller {
         layers = <4>;
