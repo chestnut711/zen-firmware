@@ -3,8 +3,24 @@
 #include <dt-bindings/zmk/input_transform.h>
 
 &pointing_listener {
-    input-processors =
-        <&zip_xy_transform 0>;   /* transform 効果ゼロ = 軸反転なし */
+    /* 親の input-processors には触らない！ snippet の設定に任せる */
+
+    /* 全レイヤー（スクロールモードのlayer 4以外）でカーソル速度スケーリング */
+    speed {
+        layers = <0 1 2 3 5 6>;
+        input-processors = <&zip_xy_scaler 10 2>;   /* 1.5倍速 */
+        process-next;
+    };
+
+    /* layer 4 でスクロールモード */
+    scroller {
+        layers = <4>;
+        input-processors =
+            <&zip_xy_transform (INPUT_TRANSFORM_Y_INVERT)>,
+            <&zip_xy_to_scroll_mapper>,
+            <&scroll_scaler 10 2>;
+        process-next;
+    };
 };
 
 &zen_transform {
