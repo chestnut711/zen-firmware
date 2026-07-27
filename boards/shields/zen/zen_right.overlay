@@ -2,24 +2,9 @@
 #include <input/processors.dtsi>
 #include <dt-bindings/zmk/input_transform.h>
 
-&zip_temp_layer {
-    require-prior-idle-ms = <300>;
-};
-
 &pointing_listener {
     input-processors =
-        <&zip_xy_transform (INPUT_TRANSFORM_X_INVERT | INPUT_TRANSFORM_Y_INVERT)>,
-        <&zip_temp_layer 1 300>,
-        <&zip_xy_scaler 20 3>;         /* 1.5倍速。速すぎたら 2 3、遅ければ 2 1 など */
-
-    scroller {
-        layers = <4>;
-        input-processors =
-            <&zip_xy_transform (INPUT_TRANSFORM_Y_INVERT)>,
-            <&zip_xy_to_scroll_mapper>,
-            <&scroll_scaler 50 2>;      /* ラベルは scroll_scaler（zip_なし） */
-        process-next;
-    };
+        <&zip_xy_transform 0>;   /* transform 効果ゼロ = 軸反転なし */
 };
 
 &zen_transform {
