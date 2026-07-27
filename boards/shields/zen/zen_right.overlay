@@ -2,23 +2,26 @@
 #include <input/processors.dtsi>
 #include <dt-bindings/zmk/input_transform.h>
 
-&pointing_listener {
-    /* 親の input-processors には触らない！ snippet の設定に任せる */
+/* zip_temp_layer ノード自体に遅延プロパティを追加 */
+&zip_temp_layer {
+    require-prior-idle-ms = <300>;
+};
 
-    /* 全レイヤー（スクロールモードのlayer 4以外）でカーソル速度スケーリング */
+&pointing_listener {
+    /* 親の input-processors は snippet に任せる */
+
     speed {
         layers = <0 1 2 3 5 6>;
-        input-processors = <&zip_xy_scaler 10 2>;   /* 1.5倍速 */
+        input-processors = <&zip_xy_scaler 1 3>;
         process-next;
     };
 
-    /* layer 4 でスクロールモード */
     scroller {
         layers = <4>;
         input-processors =
             <&zip_xy_transform (INPUT_TRANSFORM_Y_INVERT)>,
             <&zip_xy_to_scroll_mapper>,
-            <&scroll_scaler 10 2>;
+            <&scroll_scaler 5 2>;
         process-next;
     };
 };
